@@ -12,6 +12,7 @@ Route::post('/login', [AuthController::class, 'login']);
 Route::post('/logout', [AuthController::class, 'logout']);
 
 Route::get('/products', [ProductController::class, 'index']);
+Route::get('/product/{id}', [ProductController::class, 'show']);
 Route::post('/product', [ProductController::class, 'store']);
 
 Route::middleware('auth:sanctum')->group(function () {
@@ -19,4 +20,8 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('/orders', [OrderController::class, 'index']);
     Route::post('/order', [OrderController::class, 'store']);
     Route::post('/payments', [PaymentController::class, 'processPayment']);
+});
+
+Route::get("/test-me", function () {
+    return 'Hello from Laravel!';
 });

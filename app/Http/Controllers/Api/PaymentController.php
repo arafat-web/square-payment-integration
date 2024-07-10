@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Order;
 use App\Models\Transaction;
 use Illuminate\Http\Request;
-use Square\Models\CreatePaymentRequest;
+use Square\Models\CreatePaymentRequest; 
 use Square\Models\Money;
 use Square\SquareClient;
 
